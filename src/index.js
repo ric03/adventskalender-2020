@@ -26,13 +26,13 @@ function createTile(item) {
 }
 
 function openTile({id, title, msg, img}) {
-    showPopup();
-
     document.getElementById('popup-title').innerText = `#${id} ${title}`;
     document.getElementById('popup-message').innerText = msg;
     const image = document.getElementById('popup-image');
     image.src = 'img/' + img.src;
     image.alt = img.alt;
+
+    showPopup();
 }
 
 function showPopup() {
