@@ -6,25 +6,33 @@ function draw() {
     const main = document.getElementById('main');
 
     shuffle(DAYS);
-    DAYS.forEach(({id, msg, img}) => {
-        const tile = createTile(id)
+    DAYS.forEach(item => {
+        const tile = createTile(item)
         main.appendChild(tile);
     })
 }
 
-function createTile(index) {
-    const tile = document.createElement('div')
+function createTile(item) {
+    const tile = document.createElement('div');
     tile.classList.add('tile-content');
-    tile.innerText = index;
-    tile.addEventListener('click', () => openTile(index))
-
+    tile.innerText = item.id;
+    tile.addEventListener('click', () => openTile(item))
 
     const tileWrapper = document.createElement('div')
     tileWrapper.classList.add('tile-wrapper');
-    tileWrapper.id = index;
     tileWrapper.appendChild(tile);
 
     return tileWrapper;
+}
+
+function openTile({id, title, msg, img}) {
+    showPopup();
+
+    document.getElementById('popup-title').innerText = `${id} ${title}`;
+    document.getElementById('popup-message').innerText = msg;
+    const image = document.getElementById('popup-image');
+    image.src = 'img/' + img.src;
+    image.alt = img.alt;
 }
 
 function showPopup() {
@@ -35,23 +43,6 @@ function showPopup() {
 function hidePopup() {
     const popup = document.getElementById('popup');
     popup.style.display = 'none';
-}
-
-function openTile(index) {
-    showPopup();
-
-    const item = DAYS.find(el => el.id === index);
-    const popupContent = document.getElementById('popup-content');
-    popupContent.innerText = item.msg;
-}
-
-
-function createImage({alt, src}) {
-    const img = document.createElement('img')
-    img.src = src;
-    img.alt = alt;
-
-    return img;
 }
 
 function shuffle(arr) {
@@ -71,100 +62,76 @@ function swap(arr, i, k) {
 
 const DAYS = [
     {
-        id: 1,
-        msg: '1. Erster',
-        img: {alt: 'eins', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 1, title: 'Eine erste kleine Überraschung', msg: 'Alle Jahre wieder :D',
+        img: {alt: 'Adventskalender', src: 'david-olivier-gascon-e9vrm-J192k-unsplash.jpg'}
     }, {
-        id: 2,
-        msg: '2. Zweiter',
-        img: {alt: 'zwei', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 2, title: 'Hi Peter', msg: 'Der zweite Streich folgt zugleich',
+        img: {alt: '', src: ''}
     }, {
-        id: 3,
-        msg: '3. Dritter',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 3, title: '', msg: `catch(error) { window.open(\`https://www.google.com/search?q=$\{error}\`)}`,
+        img: {alt: '', src: ''}
     }, {
-        id: 4,
-        msg: '4. vierter',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 4, title: '', msg: 'while(true) neverStop()',
+        img: {alt: '', src: ''}
     }, {
-        id: 5,
-        msg: '5. fünfter',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 5, title: '', msg: 'Keep on going.',
+        img: {alt: '', src: ''}
     }, {
-        id: 6,
-        msg: '6. sechster',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 6, title: '', msg: 'Are you finished yet?',
+        img: {alt: '', src: ''}
     }, {
-        id: 7,
-        msg: '7',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 7, title: '', msg: 'It\'s about time',
+        img: {alt: '', src: ''}
     }, {
-        id: 8,
-        msg: '8',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 8, title: '', msg: 'Mit Ruhe und Gemutlichkeit',
+        img: {alt: '', src: ''}
     }, {
-        id: 9,
-        msg: '9',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 9, title: '', msg: 'Einen Schritt nach dem anderen machen',
+        img: {alt: '', src: ''}
     }, {
-        id: 10,
-        msg: '10',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 10, title: '', msg: 'Holla die Waldfee',
+        img: {alt: '', src: ''}
     }, {
-        id: 11,
-        msg: '11',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 11, title: '', msg: 'WTF - Wespe Token Factory',
+        img: {alt: '', src: ''}
     }, {
-        id: 12,
-        msg: '12',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 12, title: '', msg: 'Never ever stop believing',
+        img: {alt: '', src: ''}
     }, {
-        id: 13,
-        msg: '13',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 13, title: '', msg: 'Dont forget to drink',
+        img: {alt: '', src: ''}
     }, {
-        id: 14,
-        msg: '14',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 14, title: '', msg: 'Dont drink and drive. Exception:functioning alcoholics',
+        img: {alt: '', src: ''}
     }, {
-        id: 15,
-        msg: '15',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 15, title: '', msg: 'Lets get ready. Oh stil 9 days remaining',
+        img: {alt: '', src: ''}
     }, {
-        id: 16,
-        msg: '16',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 16, title: '', msg: 'Did you get your presents yet?',
+        img: {alt: '', src: ''}
     }, {
-        id: 17,
-        msg: '17',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 17, title: '', msg: 'Viele Wege führen zum Ziel, meiner ist es oft nicht. - Emil',
+        img: {alt: '', src: ''}
     }, {
-        id: 18,
-        msg: '18',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 18, title: '', msg: 'Fix your imports',
+        img: {alt: '', src: ''}
     }, {
-        id: 19,
-        msg: '19',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 19, title: '', msg: 'Build failed? But ...',
+        img: {alt: '', src: ''}
     }, {
-        id: 20,
-        msg: '20',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 20, title: '', msg: 'Hm. Are you hungry?',
+        img: {alt: '', src: ''}
     }, {
-        id: 21,
-        msg: '21',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 21, title: '', msg: 'Stand up, close your eyes and start running',
+        img: {alt: '', src: ''}
     }, {
-        id: 22,
-        msg: '22',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 22, title: '', msg: 'You never know what monster lurks around the next corner',
+        img: {alt: '', src: ''}
     }, {
-        id: 23,
-        msg: '23',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 23, title: '', msg: 'One day remaining',
+        img: {alt: '', src: ''}
     }, {
-        id: 24,
-        msg: '24',
-        img: {alt: '', src: 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'}
+        id: 24, title: 'Merry Christmas', msg: '',
+        img: {alt: '', src: ''}
     },
 ];

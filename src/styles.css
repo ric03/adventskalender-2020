@@ -67,7 +67,7 @@ header {
     cursor: pointer;
 }
 
-#popup-content-wrapper {
+#popup-content {
     max-width: 500px;
     background: beige;
     border-radius: 25px;
