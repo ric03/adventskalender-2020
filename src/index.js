@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     draw();
 });
 
@@ -28,7 +28,7 @@ function createTile(item) {
 function openTile({id, title, msg, img}) {
     showPopup();
 
-    document.getElementById('popup-title').innerText = `${id} ${title}`;
+    document.getElementById('popup-title').innerText = `#${id} ${title}`;
     document.getElementById('popup-message').innerText = msg;
     const image = document.getElementById('popup-image');
     image.src = 'img/' + img.src;
@@ -69,22 +69,23 @@ const DAYS = [
         img: {alt: '', src: ''}
     }, {
         id: 3, title: '', msg: `catch(error) { window.open(\`https://www.google.com/search?q=$\{error}\`)}`,
-        img: {alt: '', src: ''}
+        img: {alt: 'VW Beetle', src: 'giovanni-ribeiro-B1hX9TE7HDY-unsplash.jpg'}
     }, {
         id: 4, title: '', msg: 'while(true) neverStop()',
-        img: {alt: '', src: ''}
+        img: {alt: 'Stop sign', src: 'free-to-use-sounds-Vkt3uDeDkdg-unsplash.jpg'}
     }, {
         id: 5, title: '', msg: 'Keep on going.',
-        img: {alt: '', src: ''}
+        img: {alt: 'Toilet paper countdown', src: 'mick-haupt-S5Lz8y95m1A-unsplash.jpg'}
     }, {
-        id: 6, title: '', msg: 'Are you finished yet?',
-        img: {alt: '', src: ''}
+        id: 6, title: 'Doris', msg: 'Einfach laufen, laufen, laufen ...',
+        img: {alt: 'Walking Man', src: 'harsh-gupta-nVDB1IGq64s-unsplash.jpg'}
+
     }, {
-        id: 7, title: '', msg: 'It\'s about time',
-        img: {alt: '', src: ''}
+        id: 7, title: 'Abstract', msg: 'Today there is just this beautiful image',
+        img: {alt: 'abstract image', src: 'pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg'}
     }, {
         id: 8, title: '', msg: 'Mit Ruhe und Gemutlichkeit',
-        img: {alt: '', src: ''}
+        img: {alt: 'Snowy tree', src: 'mike-blank-L23AkTe3y20-unsplash.jpg'}
     }, {
         id: 9, title: '', msg: 'Einen Schritt nach dem anderen machen',
         img: {alt: '', src: ''}
@@ -93,45 +94,45 @@ const DAYS = [
         img: {alt: '', src: ''}
     }, {
         id: 11, title: '', msg: 'WTF - Wespe Token Factory',
-        img: {alt: '', src: ''}
+        img: {alt: 'Yoda Oh', src: 'reno-laithienne-aN3PdTgW3tc-unsplash.jpg'}
     }, {
         id: 12, title: '', msg: 'Never ever stop believing',
-        img: {alt: '', src: ''}
+        img: {alt: 'Lady driving', src: 'spencer-davis-hi1Iq4x_ldM-unsplash.jpg'}
     }, {
         id: 13, title: '', msg: 'Dont forget to drink',
-        img: {alt: '', src: ''}
+        img: {alt: 'Beer cheers', src: 'wil-stewart-UErWoQEoMrc-unsplash.jpg'}
     }, {
-        id: 14, title: '', msg: 'Dont drink and drive. Exception:functioning alcoholics',
-        img: {alt: '', src: ''}
+        id: 14, title: 'Cheers', msg: 'Dont drink and drive. Exception: functional alcoholics',
+        img: {alt: 'Lady in trunk', src: 'sule-makaroglu-BTOPcWXBCGg-unsplash.jpg'}
     }, {
         id: 15, title: '', msg: 'Lets get ready. Oh stil 9 days remaining',
-        img: {alt: '', src: ''}
+        img: {alt: 'Blue Parrot', src: 'jose-ignacio-garcia-zajaczkowski-ZkBjtrG7aYg-unsplash.jpg'}
     }, {
         id: 16, title: '', msg: 'Did you get your presents yet?',
-        img: {alt: '', src: ''}
+        img: {alt: 'Present', src: 'annie-spratt-HZuJfZlXVQY-unsplash.jpg'}
     }, {
-        id: 17, title: '', msg: 'Viele Wege führen zum Ziel, meiner ist es oft nicht. - Emil',
-        img: {alt: '', src: ''}
+        id: 17, title: 'Emil', msg: 'Viele Wege führen zum Ziel, meiner ist es oft nicht.',
+        img: {alt: 'Colosseum', src: 'l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg'}
     }, {
-        id: 18, title: '', msg: 'Fix your imports',
-        img: {alt: '', src: ''}
+        id: 18, title: '', msg: 'Hows your day?',
+        img: {alt: 'tropical beach', src: 'nattu-adnan-vvHRdOwqHcg-unsplash.jpg'}
     }, {
         id: 19, title: '', msg: 'Build failed? But ...',
-        img: {alt: '', src: ''}
+        img: {alt: 'Sparkler', src: 'wout-vanacker-l4HBYkURqvE-unsplash.jpg'}
     }, {
-        id: 20, title: '', msg: 'Hm. Are you hungry?',
-        img: {alt: '', src: ''}
+        id: 20, title: '', msg: 'Are you hungry?',
+        img: {alt: 'Breakfast', src: 'joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg'}
     }, {
-        id: 21, title: '', msg: 'Stand up, close your eyes and start running',
-        img: {alt: '', src: ''}
+        id: 21, title: 'Fly like a eagle', msg: 'Stand up, close your eyes and start running',
+        img: {alt: '', src: 'valdemaras-d-Nx2FTJfKX68-unsplash.jpg'}
     }, {
-        id: 22, title: '', msg: 'You never know what monster lurks around the next corner',
-        img: {alt: '', src: ''}
+        id: 22, title: 'Boo ', msg: 'You never know which monster lurks in the dark',
+        img: {alt: 'dark forrest', src: 'neil-rosenstech-KG-9TUrAFsg-unsplash.jpg'}
     }, {
         id: 23, title: '', msg: 'One day remaining',
-        img: {alt: '', src: ''}
+        img: {alt: 'Snowy road with christmas lights', src: 'roberto-nickson-5PQn41LFsQk-unsplash.jpg'}
     }, {
         id: 24, title: 'Merry Christmas', msg: '',
-        img: {alt: '', src: ''}
+        img: {alt: 'Christmas tree', src: 'annie-spratt-Z9Ds4w141i4-unsplash.jpg'}
     },
 ];
