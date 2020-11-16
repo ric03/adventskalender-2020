@@ -1,3 +1,6 @@
+let ENABLE_DATE_LOCK = true;
+
+
 window.addEventListener('DOMContentLoaded', () => {
     draw();
 });
@@ -26,6 +29,8 @@ function createTile(item) {
 }
 
 function openTile({id, title, msg, img}) {
+    if (!ENABLE_DATE_LOCK || !canOpenTile(id)) return;
+
     document.getElementById('popup-title').innerText = `#${id} ${title}`;
     document.getElementById('popup-message').innerText = msg;
     const image = document.getElementById('popup-image');
@@ -33,6 +38,10 @@ function openTile({id, title, msg, img}) {
     image.alt = img.alt;
 
     showPopup();
+}
+
+function canOpenTile(id) {
+    return id <= new Date().getDate();
 }
 
 function showPopup() {
