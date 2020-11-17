@@ -58,24 +58,24 @@ footer {
     border-radius: 5px;
 }
 
-#popup {
+.popup {
     display: none;
     top: 3em;
     position: absolute;
     width: 100%;
 }
 
-#popup-close {
+.popup-close {
     position: relative;
     float: right;
     cursor: pointer;
 }
 
-#popup-message {
+.popup-message {
     font-size: 2em;
 }
 
-#popup-content {
+.popup-content {
     max-width: 500px;
     background: beige;
     border-radius: 25px;
@@ -90,6 +90,11 @@ footer {
             0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
-img {
+.popup-image {
     max-width: 100%;
+}
+
+#forbidden-content {
+    background: grey;
+    color: white;
 }

@@ -10,49 +10,51 @@ function draw() {
 
     shuffle(DAYS);
     DAYS.forEach(item => {
-        const tile = createTile(item)
+        const tile = createTile(item);
         main.appendChild(tile);
-    })
+    });
 }
 
 function createTile(item) {
     const tile = document.createElement('div');
     tile.classList.add('tile-content');
     tile.innerText = item.id;
-    tile.addEventListener('click', () => openTile(item))
+    tile.addEventListener('click', () => openTile(item));
 
-    const tileWrapper = document.createElement('div')
+    const tileWrapper = document.createElement('div');
     tileWrapper.classList.add('tile-wrapper');
     tileWrapper.appendChild(tile);
 
     return tileWrapper;
 }
 
-function openTile({id, title, msg, img}) {
-    if (!ENABLE_DATE_LOCK || !canOpenTile(id)) return;
+function openTile(content) {
+    if (canOpenTile(content.id)) {
+        fillPopupWithContent(content);
+        showPopup();
+    } else {
+        showForbidden();
+    }
+}
 
+function canOpenTile(id) {
+    return ENABLE_DATE_LOCK
+        ? id <= new Date().getDate()
+        : true;
+}
+
+function fillPopupWithContent({id, title, msg, img}) {
     document.getElementById('popup-title').innerText = `#${id} ${title}`;
     document.getElementById('popup-message').innerText = msg;
     const image = document.getElementById('popup-image');
     image.src = 'img/' + img.src;
     image.alt = img.alt;
-
-    showPopup();
 }
 
-function canOpenTile(id) {
-    return id <= new Date().getDate();
-}
-
-function showPopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'flex';
-}
-
-function hidePopup() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'none';
-}
+const showPopup = () => document.getElementById('popup').style.display = 'flex';
+const hidePopup = () => document.getElementById('popup').style.display = 'none';
+const showForbidden = () => document.getElementById('forbidden').style.display = 'flex';
+const hideForbidden = () => document.getElementById('forbidden').style.display = 'none';
 
 function shuffle(arr) {
     let i = arr.length;

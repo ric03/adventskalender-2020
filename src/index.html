@@ -19,13 +19,24 @@
     <div id="main" class="container flex-evenly"></div>
 </div>
 
-<div id="popup" class="flex-evenly">
-    <div class="container" id="popup-content">
-        <div title="Close" onclick="hidePopup()" id="popup-close">X</div>
+<div id="popup" class="flex-evenly popup">
+    <div class="container popup-content" id="popup-content">
+        <div title="Close" onclick="hidePopup()" class="popup-close" id="popup-close">X</div>
         <div>
             <h2 id="popup-title"></h2>
-            <p id="popup-message"></p>
-            <img id="popup-image" src="" alt="">
+            <p class="popup-message" id="popup-message"></p>
+            <img class="popup-image" id="popup-image" src="" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="forbidden" class="flex-evenly popup">
+    <div class="container popup-content" id="forbidden-content">
+        <div title="Close" onclick="hideForbidden()" class="popup-close" id="forbidden-close">X</div>
+        <div>
+            <h2 id="forbidden-title">403</h2>
+            <p class="popup-message" id="forbidden-message">Nice try.</p>
+            <img class="popup-image" id="forbidden-image" src="img/matthew-feeney-IBGqZJUDghM-unsplash.jpg" alt="donuts">
         </div>
     </div>
 </div>
