@@ -1,4 +1,4 @@
-let ENABLE_DATE_LOCK = true;
+let DISABLE_DATE_LOCK = false;
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -38,9 +38,13 @@ function openTile(content) {
 }
 
 function canOpenTile(id) {
-    return ENABLE_DATE_LOCK
-        ? id <= new Date().getDate()
-        : true;
+    if(DISABLE_DATE_LOCK) return true;
+
+    const today = new Date();
+    const isDecember = today.getMonth() === 12;
+    const isPreviousOrSameDay = id <= today.getDate();
+
+    return isDecember && isPreviousOrSameDay;
 }
 
 function fillPopupWithContent({id, title, msg, img}) {
