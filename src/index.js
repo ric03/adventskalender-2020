@@ -1,5 +1,10 @@
 let DISABLE_DATE_LOCK = false;
 
+function toggleDateLock() {
+    DISABLE_DATE_LOCK = !DISABLE_DATE_LOCK
+    document.getElementById('toggle-date-lock')
+        .innerText = (DISABLE_DATE_LOCK ? 'Enable' : 'Disable') + ' Date Lock';
+}
 
 window.addEventListener('DOMContentLoaded', () => {
     draw();
