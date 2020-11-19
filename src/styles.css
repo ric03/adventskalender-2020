@@ -48,6 +48,8 @@ footer {
 .tile-content {
     height: 100%;
 
+    cursor: pointer;
+
     text-align: center;
     vertical-align: middle;
     font-size: 3em;
@@ -71,16 +73,16 @@ footer {
     cursor: pointer;
 }
 
-.popup-message {
-    font-size: 2em;
-}
-
 .popup-content {
     max-width: 500px;
-    background: beige;
-    border-radius: 25px;
     margin: 30px;
     padding: 30px;
+    border-radius: 25px;
+
+    font-size: 2em;
+
+    background: beige;
+
     box-shadow:
             0 2.8px 2.2px rgba(0, 0, 0, 0.034),
             0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -95,6 +97,13 @@ footer {
 }
 
 #forbidden-content {
-    background: grey;
-    color: white;
+    font-family: sans-serif;
+    background: white;
+    color: #b30920;
+}
+
+#forbidden-title {
+    font-size: 3em;
+    text-align: center;
+    color: #b30920;
 }
