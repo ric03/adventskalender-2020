@@ -43,7 +43,7 @@ function openTile(content) {
 }
 
 function canOpenTile(id) {
-    if(DISABLE_DATE_LOCK) return true;
+    if (DISABLE_DATE_LOCK) return true;
 
     const today = new Date();
     const isDecember = today.getMonth() === 12;
@@ -55,6 +55,7 @@ function canOpenTile(id) {
 function fillPopupWithContent({id, title, msg, img}) {
     document.getElementById('popup-title').innerText = `#${id} ${title}`;
     document.getElementById('popup-message').innerText = msg;
+
     const image = document.getElementById('popup-image');
     image.src = 'img/' + img.src;
     image.alt = img.alt;
@@ -99,7 +100,6 @@ const DAYS = [
     }, {
         id: 6, title: '', msg: 'Einfach laufen, laufen, laufen ...',
         img: {alt: 'Walking Man', src: 'harsh-gupta-nVDB1IGq64s-unsplash.jpg'}
-
     }, {
         id: 7, title: '', msg: 'Today there is just this beautiful image',
         img: {alt: 'abstract image', src: 'pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg'}
