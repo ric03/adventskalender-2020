@@ -97,11 +97,11 @@ const DAYS = [
         id: 5, title: '', msg: 'Keep on going.',
         img: {alt: 'Toilet paper countdown', src: 'mick-haupt-S5Lz8y95m1A-unsplash.jpg'}
     }, {
-        id: 6, title: 'Doris', msg: 'Einfach laufen, laufen, laufen ...',
+        id: 6, title: '', msg: 'Einfach laufen, laufen, laufen ...',
         img: {alt: 'Walking Man', src: 'harsh-gupta-nVDB1IGq64s-unsplash.jpg'}
 
     }, {
-        id: 7, title: 'Abstract', msg: 'Today there is just this beautiful image',
+        id: 7, title: '', msg: 'Today there is just this beautiful image',
         img: {alt: 'abstract image', src: 'pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg'}
     }, {
         id: 8, title: '', msg: 'Mit Ruhe und Gemutlichkeit',
@@ -131,13 +131,13 @@ const DAYS = [
         id: 16, title: '', msg: 'Did you get your presents yet?',
         img: {alt: 'Present', src: 'annie-spratt-HZuJfZlXVQY-unsplash.jpg'}
     }, {
-        id: 17, title: 'Emil', msg: 'Viele Wege führen zum Ziel, meiner ist es oft nicht.',
+        id: 17, title: '', msg: 'Viele Wege führen zum Ziel, meiner ist es oft nicht. - Emil',
         img: {alt: 'Colosseum', src: 'l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg'}
     }, {
         id: 18, title: '', msg: 'Hows your day?',
         img: {alt: 'tropical beach', src: 'nattu-adnan-vvHRdOwqHcg-unsplash.jpg'}
     }, {
-        id: 19, title: '', msg: 'Build failed? But ...',
+        id: 19, title: '', msg: 'Build failed.',
         img: {alt: 'Sparkler', src: 'wout-vanacker-l4HBYkURqvE-unsplash.jpg'}
     }, {
         id: 20, title: '', msg: 'Are you hungry?',
@@ -146,7 +146,7 @@ const DAYS = [
         id: 21, title: 'Fly like a eagle', msg: 'Stand up, close your eyes and start running',
         img: {alt: '', src: 'valdemaras-d-Nx2FTJfKX68-unsplash.jpg'}
     }, {
-        id: 22, title: 'Boo ', msg: 'You never know which monster lurks in the dark',
+        id: 22, title: '', msg: 'You never know which monster lurks in the dark',
         img: {alt: 'dark forrest', src: 'neil-rosenstech-KG-9TUrAFsg-unsplash.jpg'}
     }, {
         id: 23, title: '', msg: 'One day remaining',
