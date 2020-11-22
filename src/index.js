@@ -1,16 +1,20 @@
 let DISABLE_DATE_LOCK = false;
 
+window.addEventListener('DOMContentLoaded', () => {
+    drawTiles();
+
+    document.getElementById('toggle-date-lock').addEventListener('click', toggleDateLock);
+    document.getElementById('popup-close').addEventListener('click', hidePopup);
+    document.getElementById('forbidden-close').addEventListener('click', hideForbidden);
+});
+
 function toggleDateLock() {
     DISABLE_DATE_LOCK = !DISABLE_DATE_LOCK
     document.getElementById('toggle-date-lock')
         .innerText = (DISABLE_DATE_LOCK ? 'Enable' : 'Disable') + ' Date Lock';
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    draw();
-});
-
-function draw() {
+function drawTiles() {
     const main = document.getElementById('main');
 
     shuffle(DAYS);

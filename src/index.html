@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adventskalender</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
 </head>
 <body>
 
@@ -21,7 +20,7 @@
 
 <div id="popup" class="flex-evenly popup">
     <div class="container popup-content" id="popup-content">
-        <div title="Close" onclick="hidePopup()" class="popup-close" id="popup-close">X</div>
+        <div title="Close" class="popup-close" id="popup-close">X</div>
         <div>
             <h2 id="popup-title"></h2>
             <p class="popup-message" id="popup-message"></p>
@@ -32,7 +31,7 @@
 
 <div id="forbidden" class="flex-evenly popup">
     <div class="container popup-content" id="forbidden-content">
-        <div title="Close" onclick="hideForbidden()" class="popup-close" id="forbidden-close">X</div>
+        <div title="Close" class="popup-close" id="forbidden-close">X</div>
         <div>
             <h1 id="forbidden-title">ups</h1>
             <p> Aufgrund eines technischen Fehlers können Sie aktuell keine Türchen öffnen.</p>
@@ -40,7 +39,7 @@
         </div>
     </div>
 </div>
-<button onclick="toggleDateLock()" id="toggle-date-lock">Disable Date Lock</button>
+<button id="toggle-date-lock">Disable Date Lock</button>
 <footer>
     <a href="https://github.com/ric03/adventskalender">Github</a>
     &nbsp; - &nbsp;

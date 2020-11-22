@@ -1,2 +1,5 @@
 .idea
 node_modules
+
+# Build output, and is the root folder for github pages
+docs
