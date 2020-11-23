@@ -4,7 +4,7 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "start": "npx http-server docs",
+    "start": "npx http-server dist",
     "build": "webpack --mode=production",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "watch": "webpack --watch"

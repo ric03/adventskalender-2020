@@ -13,6 +13,6 @@ module.exports = {
     ],
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'docs'), // Github Pages
+        path: path.resolve(__dirname, 'dist'), // Github Pages
     },
 };
