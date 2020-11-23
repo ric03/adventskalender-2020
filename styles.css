@@ -1,0 +1,109 @@
+/*
+https://fonts.google.com/specimen/Patrick+Hand?category=Handwriting&sidebar.open=true&selection.family=Patrick+Hand
+*/
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+}
+
+header {
+    font-size: 3em;
+    color: white;
+    background-color: #de1241
+}
+
+footer {
+    text-align: center;
+}
+
+.flex-evenly {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.tile-wrapper {
+    width: 25%;
+    padding: 10px;
+}
+
+.tile-wrapper:before {
+    content: "";
+    float: left;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.tile-content {
+    height: 100%;
+
+    cursor: pointer;
+
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3em;
+    color: gold;
+
+    background-color: #de1241;
+
+    border-radius: 5px;
+}
+
+.popup {
+    display: none;
+    top: 3em;
+    position: absolute;
+    width: 100%;
+}
+
+.popup-close {
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.popup-content {
+    max-width: 500px;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+
+    font-size: 2em;
+
+    background: beige;
+
+    box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.popup-image {
+    max-width: 100%;
+}
+
+#forbidden-content {
+    font-family: sans-serif;
+    background: white;
+    color: #b30920;
+}
+
+#forbidden-title {
+    font-size: 3em;
+    text-align: center;
+    color: #b30920;
+}
