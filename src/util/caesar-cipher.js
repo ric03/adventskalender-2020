@@ -17,7 +17,8 @@ function caesarCipherASingleChar(char, offset) {
     const DEL = 127;
     const ascii = char.charCodeAt(0);
 
-    if (SPACE > ascii || ascii > DEL) return char;
+    // ignore control codes (0-31) and extended codes (>127)
+    if (ascii < SPACE || ascii > DEL) return char;
 
     const cipher =
         (ascii + offset - SPACE)
