@@ -1,3 +1,5 @@
+import {toString} from "./reduce-to-string";
+
 export function convertStringToBinary(str) {
     if (!str || str.length === 0) return '';
 
@@ -20,5 +22,3 @@ function convertCharToBinary(char) {
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
-
-const toString = (acc, cur) => acc + cur;

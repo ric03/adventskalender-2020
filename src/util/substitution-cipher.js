@@ -1,3 +1,5 @@
+import {toString} from "./reduce-to-string";
+
 export function substitutionCipher(text, dictionary) {
     if (!text || text.length === 0) return '';
     if (!isDictionaryValid(dictionary)) return text;
@@ -23,5 +25,3 @@ function substituteSingleChar(char, DICT) {
     const idx = charCode - a;
     return DICT[idx];
 }
-
-const toString = (acc, cur) => acc + cur;

@@ -1,3 +1,5 @@
+import {toString} from "./reduce-to-string";
+
 export function caesarCipher(str, offset = generateRandomOffset()) {
     if (!str || str.length === 0) return '';
 
@@ -27,5 +29,3 @@ function caesarCipherASingleChar(char, offset) {
 
     return String.fromCharCode(cipher);
 }
-
-const toString = (acc, cur) => acc + cur;
