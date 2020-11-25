@@ -1,6 +1,6 @@
 import {shuffleArray} from "./util/shuffle-array";
 
-let DISABLE_DATE_LOCK = false;
+window.DISABLE_DATE_LOCK = false;
 
 window.addEventListener('DOMContentLoaded', () => {
     drawTiles();
@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleDateLock() {
-    DISABLE_DATE_LOCK = !DISABLE_DATE_LOCK
+    window.DISABLE_DATE_LOCK = !window.DISABLE_DATE_LOCK
     document.getElementById('toggle-date-lock')
-        .innerText = (DISABLE_DATE_LOCK ? 'Enable' : 'Disable') + ' Date Lock';
+        .innerText = (window.DISABLE_DATE_LOCK ? 'Enable' : 'Disable') + ' Date Lock';
 }
 
 function drawTiles() {
