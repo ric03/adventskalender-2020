@@ -1,3 +1,5 @@
+import {shuffleArray} from "./util/shuffle-array";
+
 let DISABLE_DATE_LOCK = false;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +19,7 @@ function toggleDateLock() {
 function drawTiles() {
     const main = document.getElementById('main');
 
-    shuffle(DAYS);
+    shuffleArray(DAYS);
     DAYS.forEach(item => {
         const tile = createTile(item);
         main.appendChild(tile);
@@ -69,21 +71,6 @@ const showPopup = () => document.getElementById('popup').style.display = 'flex';
 const hidePopup = () => document.getElementById('popup').style.display = 'none';
 const showForbidden = () => document.getElementById('forbidden').style.display = 'flex';
 const hideForbidden = () => document.getElementById('forbidden').style.display = 'none';
-
-function shuffle(arr) {
-    let i = arr.length;
-    while (i > 0) {
-        const k = Math.floor(Math.random() * i--);
-        swap(arr, i, k);
-    }
-}
-
-function swap(arr, i, k) {
-    const tmp = arr[i];
-    arr[i] = arr[k];
-    arr[k] = tmp;
-}
-
 
 const DAYS = [
     {
