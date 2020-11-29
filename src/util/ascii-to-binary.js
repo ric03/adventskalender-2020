@@ -1,6 +1,6 @@
 import {toString} from "./reduce-to-string";
 
-export function convertStringToBinary(str) {
+export function asciiToBinary(str) {
     if (!str || str.length === 0) return '';
 
     return str
