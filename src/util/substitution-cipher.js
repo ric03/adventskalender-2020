@@ -1,5 +1,9 @@
 import {toString} from "./reduce-to-string";
 
+export function substitutionCipherWrapper(dict) {
+    return (text) => substitutionCipher(text, dict);
+}
+
 export function substitutionCipher(text, dictionary) {
     if (!text || text.length === 0) return '';
     if (!isDictionaryValid(dictionary)) return text;
