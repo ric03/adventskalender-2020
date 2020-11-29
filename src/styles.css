@@ -80,6 +80,7 @@ footer {
     border-radius: 25px;
 
     font-size: 2em;
+    word-wrap: break-word;
 
     background: beige;
 
