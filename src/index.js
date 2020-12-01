@@ -70,7 +70,7 @@ const hideForbidden = () => document.getElementById('forbidden').style.display =
 const DAYS = [
     {
         id: 1, title: '',
-        msg: 'Beinahe hätte es ein Türchen für jeden Ehemaligen geben können. AA B DD E F II JJ K M NN SS TT.',
+        msg: 'Beinahe hätte es ein Türchen für jeden Ehemaligen geben können. AAA B DDD E F II JJ K M NN SS TT V.',
         img: {alt: 'Team', src: 'team-cartoon.png'}
     }, {
         id: 2, title: '', msg: 'Keep on going.',
