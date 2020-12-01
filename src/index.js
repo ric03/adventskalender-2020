@@ -89,7 +89,8 @@ const DAYS = [
         id: 6, title: '', msg: 'Viele Wege führen nach Rom, meiner ist es oft nicht.',
         img: {alt: 'Colosseum', src: 'l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg'}
     }, {
-        id: 7, title: '', msg: 'lftqskgixhnwo', textTransform: caesarCipher,
+        id: 7, title: '', msg: 'Part of the solution, not the problem. lftqskgixhnwo',
+        textTransform: caesarCipher,
         img: {alt: 'Salad', src: 'raphael-nogueira-63mHpYEyjCA-unsplash.jpg'}
     }, {
         id: 8, title: '', msg: 'WTF - Wespe Token Factory',
