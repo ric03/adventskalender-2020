@@ -73,19 +73,18 @@ const DAYS = [
         msg: 'Beinahe hätte es ein Türchen für jeden Ehemaligen geben können. AAA B DDD E F II JJ K M NN SS TT V.',
         img: {alt: 'Team', src: 'team-cartoon.png'}
     }, {
-        id: 2, title: '', msg: 'Keep on going.',
-        img: {alt: 'Toilet paper countdown', src: 'mick-haupt-S5Lz8y95m1A-unsplash.jpg'}
-    }, {
-        id: 3, title: '',
-        msg: 'Connected everything is. The clues you must find. May the force be with you.',
+        id: 2, title: '', msg: 'Connected everything is. The clues you must find. - May the force be with you.',
         textTransform: asciiToBinary,
         img: {alt: ' ', src: ''}
     }, {
-        id: 4, title: '', msg: 'Es gibt jetzt zwei Tobias Huber.',
+        id: 3, title: '', msg: 'Es gibt jetzt zwei Tobias Huber.',
         img: {alt: 'Macbook with coffee mug on table', src: 'chris-montgomery-smgTvepind4-unsplash.jpg'}
     }, {
-        id: 5, title: '', msg: `catch(error) { window.open(\`https://www.google.com/search?q=$\{error}\`)}`,
-        img: {alt: 'VW Beetle', src: 'giovanni-ribeiro-B1hX9TE7HDY-unsplash.jpg'}
+        id: 4, title: '', msg: `Ein Moslem bestellt einen Burger mit Bacon. Finde den Fehler.`,
+        img: {alt: 'Delicious Burger', src: 'amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg'}
+    }, {
+        id: 5, title: '', msg: 'Keep on going.',
+        img: {alt: 'Toilet paper countdown', src: 'mick-haupt-S5Lz8y95m1A-unsplash.jpg'}
     }, {
         id: 6, title: '', msg: 'Viele Wege führen nach Rom, meiner ist es oft nicht.',
         img: {alt: 'Colosseum', src: 'l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg'}
@@ -102,36 +101,37 @@ const DAYS = [
         id: 10, title: '', msg: 'evybpzcdjmuar', textTransform: piCipher,
         img: {alt: 'Apple pie', src: 'hugo-aitken-PqYvDBwpXpU-unsplash.jpg'}
     }, {
-        id: 11, title: '', msg: 'Ein Cookie (* keine Einwilligung erforderlich)',
+        id: 11, title: '',
+        msg: 'In einer weit entfernten Galaxy, das Imperium hat die Macht an sich gerissen. Mit der Order 67 wurde die VAEM-Mehrfachauswahl aktiviert. Die geknechteten Entwickler arbeiten Tag und Nacht an der Umsetzung. Jedi Meister Joda macht sich auf den Weg ...',
+        img: {alt: 'Lego Stormtroopers on Abby Road', src: 'daniel-cheung-B7N0IjiIJYo-unsplash.jpg'}
+    }, {
+        id: 12, title: '', msg: 'Ein Cookie (* keine Einwilligung erforderlich)',
         img: {alt: 'Delicious Cookie', src: 'amirali-mirhashemian-x6VuEH2npHw-unsplash.jpg'}
     }, {
-        id: 12, title: '', msg: 'Today there is just this beautiful image',
-        img: {alt: 'abstract image', src: 'pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg'}
-    }, {
-        id: 13, title: '', msg: 'Did you get your presents yet?',
-        img: {alt: 'Present', src: 'annie-spratt-HZuJfZlXVQY-unsplash.jpg'}
-    }, {
-        id: 14, title: '',
-        msg: 'Gratuliere du hast es bis zum Ende geschafft. Auch wenn hier kein Gold gefuellter Topf steht, hoffe ich dennoch, dass es dir Spass gemacht hat.',
-        textTransform: substitutionCipherWrapper('lftqskgixhnwoevybpzcdjmuar'),
-        img: {alt: '', src: ''}
-    }, {
-        id: 15, title: '', msg: '',
+        id: 13, title: '', msg: '',
         img: {alt: 'Comic', src: 'Strip-Plus-qua-coder-la-feature-650-finalenglish.jpg'}
     }, {
-        id: 16, title: '', msg: 'Mit Ruhe und Gemutlichkeit',
+        id: 14, title: '',
+        msg: 'Gratuliere du hast es bis zum Ende geschafft. Auch wenn hier kein Gold gefuellter Topf steht, hoffe ich dennoch, dass dir die Reise Spass gemacht hat.',
+        textTransform: substitutionCipherWrapper('lftqskgixhnwoevybpzcdjmuar'),
+        img: {alt: 'Dusk', src: 'ankhesenamun-EogK39kznns-unsplash.jpg'}
+    }, {
+        id: 15, title: '', msg: 'Today there is just this beautiful image',
+        img: {alt: 'abstract image', src: 'pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg'}
+    }, {
+        id: 16, title: '', msg: 'Did you get your presents yet?',
+        img: {alt: 'Present', src: 'annie-spratt-HZuJfZlXVQY-unsplash.jpg'}
+    }, {
+        id: 17, title: '', msg: 'Mit Ruhe und Gemutlichkeit',
         img: {alt: 'Snowy tree', src: 'mike-blank-L23AkTe3y20-unsplash.jpg'}
     }, {
-        id: 17, title: '', msg: 'Hows your day?',
+        id: 18, title: '', msg: 'Hows your day?',
         img: {alt: 'tropical beach', src: 'nattu-adnan-vvHRdOwqHcg-unsplash.jpg'}
     }, {
-        id: 18, title: '', msg: '',
+        id: 19, title: '', msg: '',
         img: {alt: 'Miniature scene: family with christmas tree', src: 'tyler-delgado-Rb0ZQ8v1siY-unsplash.jpg'}
     }, {
-        id: 19, title: '', msg: 'Lets get ready. Only 5 days remaining',
-        img: {alt: 'Blue Parrot', src: 'jose-ignacio-garcia-zajaczkowski-ZkBjtrG7aYg-unsplash.jpg'}
-    }, {
-        id: 20, title: 'Cheers', msg: 'Dont drink and drive. Exception: functional alcoholics',
+        id: 20, title: 'Cheers', msg: 'Dont drink and drive. @throws FunctionalAlcoholicException',
         img: {alt: 'Lady in trunk', src: 'sule-makaroglu-BTOPcWXBCGg-unsplash.jpg'}
     }, {
         id: 21, title: 'Fly like a eagle', msg: 'Stand up, close your eyes and start running',
@@ -143,7 +143,7 @@ const DAYS = [
         id: 23, title: '', msg: 'One day remaining',
         img: {alt: 'Snowy road with christmas lights', src: 'roberto-nickson-5PQn41LFsQk-unsplash.jpg'}
     }, {
-        id: 24, title: 'Merry Christmas', msg: '',
+        id: 24, title: 'Frohe Weihnachten', msg: '',
         img: {alt: 'Christmas tree', src: 'annie-spratt-Z9Ds4w141i4-unsplash.jpg'}
     },
 ];
