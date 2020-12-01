@@ -1,5 +1,6 @@
 import {asciiToBinary} from "./util/ascii-to-binary";
 import {caesarCipher} from "./util/caesar-cipher";
+import {canOpenTile} from "./util/can-open-tile-validator";
 import {piCipher} from "./util/pi-cipher";
 import {shuffleArray} from "./util/shuffle-array";
 import {substitutionCipherWrapper} from "./util/substitution-cipher";
@@ -50,16 +51,6 @@ function openTile(content) {
     } else {
         showForbidden();
     }
-}
-
-function canOpenTile(id) {
-    if (DISABLE_DATE_LOCK) return true;
-
-    const today = new Date();
-    const isDecember = today.getMonth() === 12;
-    const isPreviousOrSameDay = id <= today.getDate();
-
-    return isDecember && isPreviousOrSameDay;
 }
 
 function fillPopupWithContent({id, title, msg, textTransform, img}) {
