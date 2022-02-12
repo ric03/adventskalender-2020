@@ -1,4 +1,4 @@
-![adventskalender](https://github.com/ric03/adventskalender/workflows/adventskalender-2020/badge.svg)
+![adventskalender](https://github.com/ric03/adventskalender-2020/workflows/adventskalender/badge.svg)
 
 ### Adventskalender
 
